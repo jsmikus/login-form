@@ -1,0 +1,252 @@
+* {
+	box-sizing: border-box;
+}
+body {
+    font-family: "myFont";
+	font-size: 1em;
+	font-weight: 200;
+	color: #fff;
+    background: linear-gradient( 180deg, #000000 50px, #ffffff 500px); 
+}
+
+#myVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	opacity: .5;
+	z-index: 0;
+    filter:grayscale(100%);
+  }
+
+@font-face {
+    font-family: "myFont";
+    src: url("fonts/FjallaOne-Regular.ttf");
+  }
+
+.form-box-bg {
+	background-image: url(images/forest-bg.jpg);
+	margin: auto auto;
+	padding: 20px;
+	border-radius:15px;
+	box-shadow: 0 0 35px rgb(0, 0, 0);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 420px;
+	height: 620px;
+	z-index: 1;
+}
+
+.form-box {
+	color: white;
+    font-family: "myFont";
+	margin: auto auto;
+	box-shadow: 0 0 15px rgb(0, 0, 0);
+	padding: 20px;
+	border-radius:15px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 400px;
+	height: 600px;
+	text-transform: uppercase;
+    letter-spacing: 1px;
+    -webkit-font-smoothing: antialiased;
+	z-index: 2;
+}
+
+.form-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.form-box .header-text {
+    font-family: "myFont";
+	font-size: 3.5em;
+	margin-bottom: 50px;
+    opacity: 90%;
+	text-align: center;
+}
+
+.form-box input {
+	margin: 15px 0px 0px 10px;
+	border: none;
+	padding: 10px;
+	border-radius: 10px;
+	width: 80%;
+	font-size: 1.125em;
+	letter-spacing: 1px;
+	font-family: "myFont";
+	display: inline-block;
+	opacity: 80%;
+	outline: none;
+}
+
+.form-box input:focus {
+	background-color: lightgreen;
+}
+
+.form-box input[type=checkbox] {
+	display: none;
+}
+
+.form-box label {
+	position: relative;
+	margin-left: 5px;
+	margin-right: 10px;
+	top: 5px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.form-box label:before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	border-radius: 5px;
+	position: absolute;
+	left: 5px;
+	bottom: 2px;
+	background-color: #ddd;
+}
+.form-box input[type=checkbox]:checked+label:before {
+	content: "\2717";
+	font-size: 20px;
+	color: #000;
+	text-align: center;
+	line-height: 20px;
+    font-family: "myFont";
+}
+.form-box span {
+	font-size: 1em;
+}
+
+.form-box button {
+	font-family: "myFont";
+	font-size: 1.2em;
+	background-color: deepskyblue;
+	color: #fff;
+	border: none;
+	border-radius: 15px;
+	cursor: pointer;
+	width: 80%;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	padding: 10px;
+	margin-top: 30px;
+	font-family: "myFont";
+}
+  
+.form-box button:hover {
+	background-color: #4CAF50; /* Green */
+	transition: ease-in-out 0.3s;
+	color: white;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+.terms {
+	font-size: 1em;
+	margin: auto auto;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 0 0 15px #000;
+	position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	width: 700px;
+	text-align: justify;
+	min-height: 100vh;
+}
+
+.back {
+	text-align: center;
+}
+
+.form-img {
+	width: 30px;
+	height: 30px; 
+	display: inline-block; 
+	margin-top: 20px;
+	opacity: 50%;
+	vertical-align: top;
+}
+
+/* validation */
+
+  input:valid {
+	border: 1px solid lightgreen;
+  }
+
+  input:invalid {
+	border: 1px solid lightcoral;
+  }
+
+/* links */
+
+a:link {
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
+  }
+  
+  a:visited {
+	color: azure;
+	background-color: transparent;
+	text-decoration: none;
+  }
+  
+  a:hover {
+	color: lightskyblue;
+	background-color: transparent;
+	text-decoration: underline;
+	font-size:larger;
+	transition: .2s ease-in-out;
+  }
+  
+  a:active {
+	color:mediumslateblue;
+	background-color: transparent;
+	text-decoration: underline;
+  }
+
+  /* Media query w środku arkusza stylów  */
+
+@media (max-width: 480px) {
+
+	.form-box .header-text {
+		font-size: 3em;
+	}
+
+	.form-box-bg {
+		max-width: 370px;
+	}
+	.form-box {
+		max-width: 350px;
+	}
+
+	.terms {
+		max-width: 400px;
+		min-width: 300px;
+		font-size: 1em;
+	}
+
+	.form-img {
+		display: none;
+	}
+
+	#myVideo {
+		display: none;
+	}
+}
