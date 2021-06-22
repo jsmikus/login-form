@@ -4,9 +4,10 @@
 body {
     font-family: "myFont";
 	font-size: 1em;
+	/* good to use ems */
 	font-weight: 200;
 	color: #fff;
-    background: linear-gradient( 180deg, #000000 50px, #ffffff 500px); 
+    background: linear-gradient( 180deg, #000000 50px, #ffffff 500px);
 }
 
 #myVideo {
@@ -18,6 +19,7 @@ body {
 	opacity: .5;
 	z-index: 0;
     filter:grayscale(100%);
+		/* nice effect with a filter */
   }
 
 @font-face {
@@ -44,6 +46,7 @@ body {
 .form-box {
 	color: white;
     font-family: "myFont";
+		/* do we need to specify it here when we have it in body already? */
 	margin: auto auto;
 	box-shadow: 0 0 15px rgb(0, 0, 0);
 	padding: 20px;
@@ -69,6 +72,7 @@ body {
 
 .form-box .header-text {
     font-family: "myFont";
+		/* do we need to specify it here when we have it in body already? */
 	font-size: 3.5em;
 	margin-bottom: 50px;
     opacity: 90%;
@@ -84,6 +88,7 @@ body {
 	font-size: 1.125em;
 	letter-spacing: 1px;
 	font-family: "myFont";
+		/* do we need to specify it here when we have it in body already? */
 	display: inline-block;
 	opacity: 80%;
 	outline: none;
@@ -125,6 +130,7 @@ body {
 	text-align: center;
 	line-height: 20px;
     font-family: "myFont";
+		/* good idea to use custom checkbox */
 }
 .form-box span {
 	font-size: 1em;
@@ -143,7 +149,6 @@ body {
 	text-transform: uppercase;
 	padding: 10px;
 	margin-top: 30px;
-	font-family: "myFont";
 }
   
 .form-box button:hover {
@@ -196,6 +201,7 @@ body {
 /* links */
 
 a:link {
+	/* if there are some the same properties you can style first all a with the transparent background and text-decoration and then the diffrences in pseudo-selectors, read about DRY in coding */
 	color: white;
 	background-color: transparent;
 	text-decoration: none;
@@ -220,6 +226,7 @@ a:link {
 	background-color: transparent;
 	text-decoration: underline;
   }
+
 
   /* Media query w środku arkusza stylów  */
 
@@ -249,4 +256,6 @@ a:link {
 	#myVideo {
 		display: none;
 	}
+
+	/* great that you try the media queries, in fact it is useable on mobile right now */
 }
