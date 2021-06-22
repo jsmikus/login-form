@@ -1,12 +1,25 @@
 * {
 	box-sizing: border-box;
 }
+
+@font-face {
+    font-family: "myFont";
+    src: url("fonts/FjallaOne-Regular.ttf");
+}
+
 body {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    height: 100vh;
     font-family: "myFont";
 	font-size: 1em;
 	font-weight: 200;
 	color: #fff;
-    background: linear-gradient( 180deg, #000000 50px, #ffffff 500px); 
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 #myVideo {
@@ -20,39 +33,27 @@ body {
     filter:grayscale(100%);
   }
 
-@font-face {
-    font-family: "myFont";
-    src: url("fonts/FjallaOne-Regular.ttf");
-  }
-
-.form-box-bg {
+.form-container {
 	background-image: url(images/forest-bg.jpg);
 	margin: auto auto;
 	padding: 20px;
 	border-radius:15px;
 	box-shadow: 0 0 35px rgb(0, 0, 0);
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	width: 420px;
-	height: 620px;
+	width: 440px;
+	height: 640px;
 	z-index: 1;
 }
 
-.form-box {
+.form {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 	color: white;
-    font-family: "myFont";
 	margin: auto auto;
 	box-shadow: 0 0 15px rgb(0, 0, 0);
-	padding: 20px;
+	padding: 15x;
 	border-radius:15px;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
 	width: 400px;
 	height: 600px;
 	text-transform: uppercase;
@@ -61,21 +62,14 @@ body {
 	z-index: 2;
 }
 
-.form-container {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    text-align: center;
-}
-
-.form-box .header-text {
-    font-family: "myFont";
+.header-text {
 	font-size: 3.5em;
 	margin-bottom: 50px;
     opacity: 90%;
 	text-align: center;
 }
 
-.form-box input {
+.form input {
 	margin: 15px 0px 0px 10px;
 	border: none;
 	padding: 10px;
@@ -83,21 +77,24 @@ body {
 	width: 80%;
 	font-size: 1.125em;
 	letter-spacing: 1px;
-	font-family: "myFont";
-	display: inline-block;
 	opacity: 80%;
 	outline: none;
+	font-family: "myFont";
 }
 
-.form-box input:focus {
+.form input:focus {
 	background-color: lightgreen;
 }
 
-.form-box input[type=checkbox] {
+.form-consent {
+	margin-top: 20px;
+}
+
+.form input[type=checkbox] {
 	display: none;
 }
 
-.form-box label {
+.form label {
 	position: relative;
 	margin-left: 5px;
 	margin-right: 10px;
@@ -108,7 +105,7 @@ body {
 	cursor: pointer;
 }
 
-.form-box label:before {
+.form label:before {
 	content: "";
 	width: 20px;
 	height: 20px;
@@ -118,20 +115,18 @@ body {
 	bottom: 2px;
 	background-color: #ddd;
 }
-.form-box input[type=checkbox]:checked+label:before {
+.form input[type=checkbox]:checked+label:before {
 	content: "\2717";
 	font-size: 20px;
 	color: #000;
 	text-align: center;
 	line-height: 20px;
-    font-family: "myFont";
 }
-.form-box span {
+.form span {
 	font-size: 1em;
 }
 
-.form-box button {
-	font-family: "myFont";
+.form button {
 	font-size: 1.2em;
 	background-color: deepskyblue;
 	color: #fff;
@@ -142,11 +137,11 @@ body {
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
 	padding: 10px;
-	margin-top: 30px;
+	margin-top: 50px;
 	font-family: "myFont";
 }
   
-.form-box button:hover {
+.form button:hover {
 	background-color: #4CAF50; /* Green */
 	transition: ease-in-out 0.3s;
 	color: white;
@@ -175,14 +170,21 @@ body {
 }
 
 .form-img {
+    display: flex;
 	width: 30px;
 	height: 30px; 
-	display: inline-block; 
+	display: flex;
 	margin-top: 20px;
 	opacity: 50%;
-	vertical-align: top;
 }
 
+.form-field {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
 /* validation */
 
   input:valid {
@@ -195,31 +197,28 @@ body {
 
 /* links */
 
+a {
+	background-color: transparent;
+	text-decoration: none;
+}
+
 a:link {
 	color: white;
-	background-color: transparent;
-	text-decoration: none;
-  }
+}
   
-  a:visited {
-	color: azure;
-	background-color: transparent;
-	text-decoration: none;
-  }
-  
-  a:hover {
+a:hover {
 	color: lightskyblue;
-	background-color: transparent;
-	text-decoration: underline;
 	font-size:larger;
 	transition: .2s ease-in-out;
-  }
+}
+
+a:visited {
+    color: yellow;
+}
   
-  a:active {
+a:active {
 	color:mediumslateblue;
-	background-color: transparent;
-	text-decoration: underline;
-  }
+}
 
   /* Media query w środku arkusza stylów  */
 
@@ -229,10 +228,10 @@ a:link {
 		font-size: 3em;
 	}
 
-	.form-box-bg {
+	.form-container {
 		max-width: 370px;
 	}
-	.form-box {
+	.form {
 		max-width: 350px;
 	}
 
