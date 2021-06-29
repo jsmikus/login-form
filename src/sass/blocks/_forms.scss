@@ -1,0 +1,103 @@
+.login-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    margin: auto auto;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    padding: 15x;
+    border-radius:15px;
+    width: 400px;
+    height: 600px;
+    letter-spacing: 1px;
+    -webkit-font-smoothing: antialiased;
+    z-index: 1;
+    
+        img {
+            display: flex;
+            width: 30px;
+            height: 30px; 
+            display: flex;
+            margin-top: 20px;
+            opacity: 50%;
+            }
+        input {
+            margin: 15px 0px 0px 10px;
+            border: none;
+            padding: 10px;
+            border-radius: 15px;
+            width: 80%;
+            font-size: 1.2em;
+            letter-spacing: 2px;
+            opacity: 70%;
+            outline: 0;
+            cursor: text;
+            color: black;
+            }
+            input[type=checkbox] {
+                display:none;
+            }
+            input[type=checkbox]:checked+label:before {
+                content: "\2717";
+                font-size: 20px;
+                color:royalblue;
+                text-align: center;
+                line-height: 20px;
+            }
+            label {
+                position: relative;
+                margin-left: 5px;
+                margin-right: 10px;
+                top: 5px;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+            }
+            label:before {
+                content: "";
+                width: 20px;
+                height: 20px;
+                border-radius: 5px;
+                position: absolute;
+                left: 5px;
+                bottom: 2px;
+                background-color: #ddd;
+            }
+            :focus {
+                background-color: $green;
+                }
+            ::placeholder {
+                color: $dark;
+                letter-spacing: 1px;
+                font-size: 1em;
+                font-weight: 300;
+            }
+            :invalid {
+                border: 1px solid red;
+              
+            }
+            :valid {
+                border: 1px solid lightgreen;
+                  
+            }
+            
+            &__header {
+                font-size: 3.5em;
+                margin-bottom: 50px;
+                opacity: 90%;
+                text-align: center;
+            }
+            
+            &__field {
+                width: 300px;
+                display: flex;
+                flex-direction: row;
+                justify-content:center;
+                align-items: center;
+                }
+            &__consent {
+                margin-top: 30px;
+                }
+}

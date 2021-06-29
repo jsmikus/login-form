@@ -1,0 +1,30 @@
+@media (max-width: 480px) {
+
+	.form-box .header-text {
+		font-size: 3em;
+	}
+
+	.container {
+		max-width: 370px;
+	}
+	.login-form {
+		max-width: 350px;
+		&__header {
+			font-size: 2.5em;
+			margin-bottom: 20px;
+		}
+	}
+	.terms {
+		max-width: 400px;
+		min-width: 300px;
+		font-size: 1em;
+	}
+
+	.login-form-img {
+		display: none;
+	}
+
+	#myVideo {
+		display: none;
+	}
+}
