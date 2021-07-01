@@ -12,8 +12,7 @@
     height: 600px;
     letter-spacing: 1px;
     -webkit-font-smoothing: antialiased;
-    z-index: 1;
-    
+    z-index: 1; 
         img {
             display: flex;
             width: 30px;
@@ -22,7 +21,7 @@
             margin-top: 20px;
             opacity: 50%;
             }
-        input {
+            input {
             margin: 15px 0px 0px 10px;
             border: none;
             padding: 10px;
